@@ -24,6 +24,7 @@
 		DA6F16C825EB9A0500E61701 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F16C725EB9A0500E61701 /* HomeViewController.swift */; };
 		DA6F16CD25EB9A0800E61701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6F16CC25EB9A0800E61701 /* Assets.xcassets */; };
 		DA6F16D025EB9A0800E61701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6F16CE25EB9A0800E61701 /* LaunchScreen.storyboard */; };
+		DA85A4D52632C5D500FFE004 /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85A4D42632C5D400FFE004 /* PlayerControlsView.swift */; };
 		DA96D8E826301EA800BA8A57 /* SearchResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96D8E726301EA800BA8A57 /* SearchResultsResponse.swift */; };
 		DA96D8EC263023BF00BA8A57 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96D8EB263023BF00BA8A57 /* SearchResult.swift */; };
 		DA96D8EF2632983D00BA8A57 /* SearchResultDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96D8EE2632983D00BA8A57 /* SearchResultDefaultTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 		DA6F16CC25EB9A0800E61701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6F16CF25EB9A0800E61701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA6F16D125EB9A0800E61701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA85A4D42632C5D400FFE004 /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
 		DA96D8E726301EA800BA8A57 /* SearchResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsResponse.swift; sourceTree = "<group>"; };
 		DA96D8EB263023BF00BA8A57 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DA96D8EE2632983D00BA8A57 /* SearchResultDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				DA2E2F1F25FF450100B7B8E8 /* TitleHeaderCollectionReusableView.swift */,
 				DA2E2F2226007B3A00B7B8E8 /* AlbumTrackCollectionViewCell.swift */,
 				DAB78F072626BC5100AD487A /* CategoryCollectionViewCell.swift */,
+				DA85A4D42632C5D400FFE004 /* PlayerControlsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				DAEA04EC25ECA7D700DD728F /* NewReleasesResponse.swift in Sources */,
 				DAEA04FB25ECC5B800DD728F /* RecommendationsResponse.swift in Sources */,
 				DAB78F082626BC5100AD487A /* CategoryCollectionViewCell.swift in Sources */,
+				DA85A4D52632C5D500FFE004 /* PlayerControlsView.swift in Sources */,
 				DAC74EFD25EB9D5B00E4E8C1 /* AudioTrack.swift in Sources */,
 				DA96D8E826301EA800BA8A57 /* SearchResultsResponse.swift in Sources */,
 				DA96D8F626329E4800BA8A57 /* SearchResultSubtitleTableViewCell.swift in Sources */,

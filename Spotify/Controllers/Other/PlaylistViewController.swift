@@ -151,19 +151,13 @@ extension PlaylistViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-
-        let index = indexPath.row
-        let track = tracks[index]
+        let track = tracks[indexPath.row]
         PlaybackPresenter.startPlayback(from: self, track: track)
     }
 }
 
 extension PlaylistViewController: PlaylistHeaderCollectionReusableViewDelegate {
     func playlistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
-        // start play list play in queue
-        
-        print("Playing all")
-        
-        
+        PlaybackPresenter.startPlayback(from: self, tracks: tracks)
     }
 }
