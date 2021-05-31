@@ -6,13 +6,22 @@
 //
 
 import UIKit
+import SDWebImage
+
+protocol PlayerViewControllerDelegate: AnyObject {
+    func didTapPlay()
+    func didTapForward()
+    func didTapBackward()
+    func didSlideSlider(_ value: Float)
+}
 
 class PlayerViewController: UIViewController {
+    weak var dataSource: PlayerDataSource?
+    weak var delegate: PlayerViewControllerDelegate?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .systemBlue
         return imageView
     }()
 
@@ -26,22 +35,18 @@ class PlayerViewController: UIViewController {
         view.addSubview(controlsView)
         controlsView.delegate = self
         configureBarButtons()
+        configure()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        imageView.frame = CGRect(
-            x: 0,
-            y: view.safeAreaInsets.top,
-            width: view.width,
-            height: view.width
-        )
-        controlsView.frame = CGRect(
-            x: 10,
-            y: imageView.bottom + 10,
-            width: view.width - 20,
-            height: view.height - imageView.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 15
-        )
+        imageView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: view.width)
+        controlsView.frame = CGRect(x: 10, y: imageView.bottom + 10, width: view.width - 20, height: view.height - imageView.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 15)
+    }
+    
+    private func configure() {
+        imageView.sd_setImage(with: dataSource?.imageURL, completed: nil)
+        controlsView.configure(with: PlayerControlsViewViewModel(title: dataSource?.songName, subtitle: dataSource?.subtitle))
     }
     
     private func configureBarButtons() {
@@ -56,20 +61,27 @@ class PlayerViewController: UIViewController {
     @objc private func didTapAction() {
         dismiss(animated: true, completion: nil)
     }
+    
+    func refreshUI() {
+        
+        configure()
+    }
 }
 
 extension PlayerViewController: PlayerControlsViewDelegate {
     func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
-        <#code#>
+        delegate?.didTapPlay()
     }
     
     func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
-        <#code#>
+        delegate?.didTapForward()
     }
     
     func playerControlsViewDidTapBackwardButton(_ playerControlsView: PlayerControlsView) {
-        <#code#>
+        delegate?.didTapBackward()
     }
     
-    
+    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float) {
+        delegate?.didSlideSlider(value)
+    }
 }

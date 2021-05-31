@@ -41,19 +41,8 @@ class AlbumTrackCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        trackNameLabel.frame = CGRect(
-            x: 10,
-            y: 0,
-            width: contentView.width - 15,
-            height: contentView.height / 2
-        )
-        
-        artistNameLabel.frame = CGRect(
-            x: 10,
-            y: contentView.height / 2,
-            width: contentView.width - 15,
-            height: contentView.height / 2
-        )
+        trackNameLabel.frame = CGRect(x: 10, y: 0, width: contentView.width - 15, height: contentView.height / 2)
+        artistNameLabel.frame = CGRect(x: 10, y: contentView.height / 2, width: contentView.width - 15, height: contentView.height / 2)
     }
     
     override func prepareForReuse() {

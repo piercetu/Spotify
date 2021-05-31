@@ -7,22 +7,26 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: VideoSplashViewController {
     
     private let signInButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
+        button.layer.cornerRadius = 25
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.white, for: .normal)
         button.setTitle("Sign In with Spotify", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-       
+        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupSplash()
         title = "Spotify"
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .systemBackground
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
     }
@@ -30,14 +34,9 @@ class WelcomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        signInButton.frame = CGRect(
-            x: 20,
-            y: view.height - 50 - view.safeAreaInsets.bottom,
-            width: view.width - 40,
-            height: 50
-        )
+        signInButton.frame = CGRect(x: 20, y: view.height - 100 - view.safeAreaInsets.bottom, width: view.width - 40, height: 50)
     }
-
+    
     @objc func didTapSignIn() {
         let vc = AuthViewController()
         vc.completionHandler = { [weak self] success in
@@ -47,6 +46,21 @@ class WelcomeViewController: UIViewController {
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func setupSplash() {
+        // Video Background
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Spotify", ofType: "mp4") ?? "")
+        
+        videoFrame = view.frame
+        fillMode = .resizeAspectFill
+        alwaysRepeat = true
+        sound = false
+        startTime = 2.0
+        alpha = 0.8
+        
+        contentURL = url
+        //        view.isUserInteractionEnabled = false
     }
     
     private func handleSignIn(success: Bool) {

@@ -86,17 +86,12 @@ final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {
         descriptionLabel.frame = CGRect(x: 10, y: nameLabel.bottom, width: width - 20, height: 44)
         ownerLabel.frame = CGRect(x: 10, y: descriptionLabel.bottom, width: width - 20, height: 44)
         playAllButton.frame = CGRect(x: width - 80, y: height - 80, width: 60, height: 60)
-        
-//        nameLabel.text = nil
-//        ownerLabel.text = nil
-//        descriptionLabel.text = nil
-//        imageView.sd_setImage(with: viewModel.artworkURL, completed: nil)
     }
     
     func configure(with viewModel: PlaylistHeaderViewViewModel) {
         nameLabel.text = viewModel.name
         ownerLabel.text = viewModel.ownerName
         descriptionLabel.text = viewModel.description
-        imageView.sd_setImage(with: viewModel.artworkURL, completed: nil)
+        imageView.sd_setImage(with: viewModel.artworkURL, placeholderImage: UIImage(systemName: "photo"), completed: nil)
     }
 }

@@ -1,0 +1,111 @@
+[
+    {
+        "title":"Recently Played",
+        "playlists":
+        [
+            {
+                "title":"Within the Endless Well",
+                "artist":"BLAKMOTH",
+                "image": "https://ia601403.us.archive.org/34/items/mbid-b882167f-47ff-4f3c-9f9c-00a0d73587dc/mbid-b882167f-47ff-4f3c-9f9c-00a0d73587dc-27730283210_thumb500.jpg"
+            },
+            {
+                "title":"DWAY!",
+                "artist":"Jackson Wang",
+                "image": "https://ia601403.us.archive.org/11/items/mbid-339b8ba2-d00d-46fa-895e-82c96ec4cc49/mbid-339b8ba2-d00d-46fa-895e-82c96ec4cc49-27730251144_thumb500.jpg"
+            },
+            {
+                "title":"Blueberry Eyes",
+                "artist":"Tomas Fujiwara",
+                "image": "https://ia600104.us.archive.org/30/items/mbid-5adea713-8bee-4cf8-9678-c37f320aff51/mbid-5adea713-8bee-4cf8-9678-c37f320aff51-18567294318_thumb500.jpg"
+            },
+            {
+                "title":"Blood",
+                "artist":"Illenium",
+                "image": "https://ia803105.us.archive.org/29/items/mbid-015ac6ea-87cd-4ac7-a504-875a04d17155/mbid-015ac6ea-87cd-4ac7-a504-875a04d17155-25939590388_thumb500.jpg"
+            }
+        ]
+    },
+    {
+        "title":"Just Released",
+        "playlists":
+        [
+            {
+                "title":"ATTENTION",
+                "artist":"Joji",
+                "image": "https://ia800905.us.archive.org/21/items/mbid-8137ca0f-123a-4800-8b28-f1f3be6c938d/mbid-8137ca0f-123a-4800-8b28-f1f3be6c938d-22161245781_thumb500.jpg"
+            },
+            {
+                "title":"100 Degrees",
+                "artist":"Rich Brian",
+                "image": "https://ia803002.us.archive.org/35/items/mbid-4220b782-0a1d-4575-a2cf-b85967da1fb7/mbid-4220b782-0a1d-4575-a2cf-b85967da1fb7-25073467613_thumb500.jpg"
+            },
+            {
+                "title":"Clay",
+                "artist":"Juan RIOS",
+                "image": "https://coverartarchive.org/release-group/ee5413ed-a62f-444f-90a7-3172d745d7cd/front-500.jpg"
+            }
+        ]
+    },
+    {
+        "title":"Music You Like",
+        "playlists":
+        [
+            {
+                "title":"Bad Luck",
+                "artist":"Khalid",
+                "image": "https://ia800906.us.archive.org/31/items/mbid-cc41582e-cbf4-4882-8508-aa113df92e86/mbid-cc41582e-cbf4-4882-8508-aa113df92e86-22949442942_thumb500.jpg"
+            },
+            {
+                "title":"Pigeon",
+                "artist":"London Modular Alliance",
+                "image": "https://ia801404.us.archive.org/32/items/mbid-13dec15b-7a2f-4c9a-b842-8addaa22e063/mbid-13dec15b-7a2f-4c9a-b842-8addaa22e063-27730357850_thumb500.jpg"
+            },
+            {
+                "title":"Aus isch teilt",
+                "artist":"The Burden Remains",
+                "image": "https://ia601402.us.archive.org/2/items/mbid-4b0c8f09-7684-470e-9484-4b15db757b61/mbid-4b0c8f09-7684-470e-9484-4b15db757b61-27730413758_thumb500.jpg"
+            },
+            {
+                "title":"Immersion",
+                "artist":"Rings Around Saturn",
+                "image": "https://ia801402.us.archive.org/21/items/mbid-55169085-65fe-4cb8-8e5b-dcd411d584b5/mbid-55169085-65fe-4cb8-8e5b-dcd411d584b5-27730421131_thumb500.jpg"
+            },
+            {
+                "title":"Carnvial",
+                "artist":"Stomu Yamashta's Go",
+                "image": "https://ia801509.us.archive.org/16/items/mbid-74c102b8-a2ea-4160-9e3f-01d326320189/mbid-74c102b8-a2ea-4160-9e3f-01d326320189-27730428718_thumb500.jpg"
+            },
+            {
+                "title":"Poet Tree",
+                "artist":"Elemint",
+                "image": "https://ia801501.us.archive.org/21/items/mbid-e29382c2-0717-44b1-9155-de2ecaca2736/mbid-e29382c2-0717-44b1-9155-de2ecaca2736-27730436567_thumb500.jpg"
+            }
+        ]
+    },
+    {
+        "title":"Favorites",
+        "playlists":
+        [
+            {
+                "title":"Move On",
+                "artist":"Ed Sheeran",
+                "image": "https://ia801300.us.archive.org/23/items/mbid-3c8473d3-202c-44c8-a37b-8e259fe12c39/mbid-3c8473d3-202c-44c8-a37b-8e259fe12c39-12249381648_thumb500.jpg"
+            },
+            {
+                "title":"Rumble and Crawl",
+                "artist":"Chantel Van T",
+                "image": "https://ia601406.us.archive.org/23/items/mbid-012aea7a-5eda-4551-9ca5-428619cced7d/mbid-012aea7a-5eda-4551-9ca5-428619cced7d-27730423498_thumb500.jpg"
+            },
+            {
+                "title":"Voyage",
+                "artist":"Rings Around Saturn",
+                "image": "https://ia601400.us.archive.org/22/items/mbid-907b0064-cc04-409f-bcc5-577467705a17/mbid-907b0064-cc04-409f-bcc5-577467705a17-27730404553_thumb500.jpg"
+            },
+            {
+                "title":"Home Alone",
+                "artist":"Walk off the Earth",
+                "image": "https://ia801508.us.archive.org/5/items/mbid-379ddd1e-34c2-42db-aab2-1e244ba941ef/mbid-379ddd1e-34c2-42db-aab2-1e244ba941ef-27730443803_thumb500.jpg"
+            }
+        ]
+    }
+]

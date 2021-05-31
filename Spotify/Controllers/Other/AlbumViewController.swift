@@ -73,6 +73,35 @@ class AlbumViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        fetchData()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapActions))
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        collectionView.frame = view.bounds
+    }
+    
+    @objc func didTapActions() {
+        let actionSheet = UIAlertController(title: album.name, message: "Actions", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Save Album", style: .default, handler: { [weak self] (_) in
+            guard let self = self else { return }
+            APICaller.shared.saveAlbum(album: self.album) { (success) in
+                if success {
+                    HapticsManager.shared.vibrate(for: .success)
+                    NotificationCenter.default.post(name: .albumSavedNotification, object: nil)
+                } else {
+                    HapticsManager.shared.vibrate(for: .error)
+                }
+            }
+        }))
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func fetchData() {
         APICaller.shared.getAlbumDetails(for: album) { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
@@ -92,13 +121,6 @@ class AlbumViewController: UIViewController {
                 }
             }
         }
-        
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        collectionView.frame = view.bounds
     }
 }
 
@@ -134,14 +156,20 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let track = tracks[indexPath.row]
-        PlaybackPresenter.startPlayback(from: self, track: track)
+        var track = tracks[indexPath.row]
+        track.album = self.album
+        PlaybackPresenter.shared.startPlayback(from: self, track: track)
     }
 }
 
 extension AlbumViewController: PlaylistHeaderCollectionReusableViewDelegate {
     func playlistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
-        PlaybackPresenter.startPlayback(from: self, tracks: tracks)
+        let tracksWtihAlbum: [AudioTrack] = tracks.compactMap({
+            var track = $0
+            track.album = self.album
+            return track
+        })
+        PlaybackPresenter.shared.startPlayback(from: self, tracks: tracksWtihAlbum)
     }
 }
 
